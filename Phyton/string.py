@@ -33,3 +33,15 @@ c = 1.5
 string = 'b={1} a={0} b={1} c={2:.2f} c={2:.5f}'
 formato = string.format(a,b,c) # a = INDICE 0 b = INDICE 1 c = INDICE 2(que nem vetor)
 print(formato)
+
+#função para contar string
+
+variavel = 'lucas'
+print(len(variavel))
+
+#fatiamento
+
+variavel = 'lucas ferreira'
+print(variavel[0:7:1])
+variavel_invertida = 'lucas ferreira'
+print(variavel_invertida[::-1])
