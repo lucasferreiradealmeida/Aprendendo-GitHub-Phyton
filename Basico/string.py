@@ -9,9 +9,12 @@ print(2,"Lucas 'Ferreira'")
 print("Lucas \"Ferreira\"")
 #r
 print(r"Lucas \"Ferreira")
+#função end e sep
+print('Lucas','Ferreira',end='*\n')
+print('Lucas','Ferreira',sep='*')
 
 
-#Formatacao de strings
+#Funçao format
 
 
 nome = 'lucas'
