@@ -5,6 +5,20 @@
 print("Iterando sobre uma sequência de números:")
 for i in range(5):
     print(i)
+print('\n')
+
+#for por baixo dos panos 
+print('For por baixo dos panos:')
+texto = 'Luiz'  # iterável
+
+iteratador = iter(texto)  # iterator
+
+while True:
+    try:
+         letra = next(iteratador)
+         print(letra)
+    except StopIteration:
+        break
 
 # 2. Iterando sobre uma lista
 # A lista pode conter qualquer tipo de elementos
