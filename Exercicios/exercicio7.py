@@ -14,16 +14,36 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
+import os
 
-palavra_secreta = 'Lucas'
+palavra_secreta = 'lucas'
+letra_acertada = ''
+somatorio = 0
+
 
 while True:
     letra_digitada = input("Digite uma letra:")
-    if len(letra_digitada) != 1 and letra_digitada != ' ':
+    if len(letra_digitada) != 1:
         print('Digite apenas uma letra')
+        continue
+    somatorio += 1
+
+    if letra_digitada in palavra_secreta:
+        letra_acertada += letra_digitada
     else:
-        if letra_digitada in palavra_secreta:
-            letra_acertadas += letra_digitada
-        for letra_secreta in palavra_secreta:
-            print(letra_secreta)
-        
+        print('Essa letra não está dentro da palavra secreta')
+
+    palavra_formada = ''
+    for letra_secreta in palavra_secreta:
+        if letra_secreta in letra_acertada:
+            palavra_formada += letra_secreta
+        else:
+            palavra_formada += '*'
+    print(f'Palavra secreta:{palavra_formada}')
+    print(f'Somatorio: {somatorio}')
+
+    if palavra_formada ==  palavra_secreta:
+        os.system('cls')
+        print('VOCÊ ACERTOU!')
+        print(f'A palavra era:{palavra_secreta}')
+        print(f'O numero de tentativas foi:{somatorio}')
